@@ -1,0 +1,44 @@
+<% include partials/subheader %>
+
+
+<br><br><br><br><br>
+<div class="container">
+            
+            <header class="jumbotron">
+                    <div class="container">
+                        <h1> graphizs portfolio</h1>
+                        <p>View our hand-picked graphics from all over the world</p>
+                        
+                        <p>
+                            <a class="btn btn-large" href="/graphics/new">Add New Graphics</a>
+                        </p>
+                    </div>
+            </header>
+            
+            <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+                
+                
+            
+                        
+                        <% graphics.forEach(function(graphics){%>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                              
+                                <img src=" <%= graphics.image%>">
+                                        <div class="caption">
+                                              <h4><%= graphics.name %></h4>
+                                            
+                                        </div>
+                                </div>
+                              
+                             </div> 
+                            </li>
+                        
+                        <% }); %>
+            
+            
+            </div>
+
+</div>
+
+<% include partials/footer %>
